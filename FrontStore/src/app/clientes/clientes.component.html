@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="row">
+      <p class="title">Lista de Clientes</p>
+    </div>
+    <div class="row">
+      <div class="container-table">
+        <div class="container-add">
+          <button (click)="createClient()" class="new-btn">
+            Agregar cliente
+          </button>
+        </div>
+        <table class="table" id="product">
+          <thead>
+            <tr class="header">
+              <th>Id</th>
+              <th>Documento</th>
+              <th>Nombre</th>
+              <th>Teléfono</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cliente of listClients">
+              <td>{{ cliente.IdClient }}</td>
+              <td>{{ cliente.IdentityCard }}</td>
+              <td>{{ cliente.NameClient }} {{ cliente.SurnameClient }}</td>
+              <td>{{ cliente.Phone }}</td>
+              <td>
+                <div class="edit-btn">
+                  <p>
+                    <span (click)="editClient(cliente.IdClient)">Editar</span>
+                  </p>
+                </div>
+                <div class="delete-btn">
+                  <p>
+                    <span (click)="deleteClient(cliente.IdClient)"
+                      >Eliminar</span
+                    >
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container-form">
+      <div class="col-12">
+        <div *ngIf="showNewClient">
+          <form (ngSubmit)="saveChanges()">
+            <h2 class="title">{{ titleClient }}</h2>
+            <table class="table-form">
+              <thead>
+                <tr class="header-form">
+                  <th>Id</th>
+                  <th>Documento</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Teléfono</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr >
+                  <td>
+                    <input
+                      type="text"
+                      name="IdClient"
+                      [(ngModel)]="newClient.IdClient"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="IdentityCard"
+                      [(ngModel)]="newClient.IdentityCard"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="NameClient"
+                      [(ngModel)]="newClient.NameClient"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="SurnameClient"
+                      [(ngModel)]="newClient.SurnameClient"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="Phone"
+                      [(ngModel)]="newClient.Phone"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="container-save"><button type="submit" class="save-btn">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

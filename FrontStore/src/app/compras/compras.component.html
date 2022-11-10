@@ -1,0 +1,65 @@
+<div>
+  <p class="title">Gestión de compras</p>
+</div>
+<div class="container-selector">
+  <label for="client" class="label-user">Usuario que hará las compras: </label>
+  <select name="client" id="client" class="select-client" [(ngModel)]="selectedClient" (change)="getProductsByClient()">
+    <option [ngValue]="null" disabled selected>Seleccionar usuario</option>
+    <option *ngFor="let client of listClients" [ngValue]="client.IdClient">
+      {{ client.NameClient + " " + client.SurnameClient }}
+    </option>
+  </select>
+</div>
+
+<div class="container-products" *ngIf="showProducts">
+  <p class="sub-title">Comprar productos</p>
+  <table class="table" id="product">
+    <thead>
+      <tr class="header-form">
+        <th>Id</th>
+        <th>Producto</th>
+        <th>Valor</th>
+        <th>Cantidad</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of listProducts">
+        <td>{{ producto.IdProduct }}</td>
+        <td>{{ producto.NameProduct }}</td>
+        <td>{{ producto.UnitPrice }}</td>
+        <td>
+          <input type="number" id="mount-prod-{{ producto.IdProduct }}" />
+        </td>
+        <td>
+          <div class="edit-btn">
+            <p><span (click)="buyProduct(producto.IdProduct)">
+              Comprar
+            </span></p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container-products" *ngIf="showProducts">
+  <p class="sub-title">Productos comprados</p>
+  <table class="table">
+    <tr>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Valor unitario</th>
+      <th>Valor total</th>
+    </tr>
+    <tr *ngFor="let purchase of listPurchase">
+      <td>{{ purchase.NameProduct }}</td>
+      <td>{{ purchase.Amount }}</td>
+      <td>{{ purchase.UnitPrice }}</td>
+      <td>{{ purchase.TotalValue }}</td>
+    </tr>
+    <tr *ngIf="listPurchase.length == 0">
+      <td colspan="4">Este usuario no tiene compras</td>
+    </tr>
+  </table>
+</div>

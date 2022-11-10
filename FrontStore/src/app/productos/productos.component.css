@@ -1,0 +1,131 @@
+
+table,
+th,
+td {
+  border: 1px solid rgb(48, 5, 148);
+  border-collapse: collapse;
+  padding: 10px;
+  font-size: 14px;
+}
+
+th {
+  background-color: rgb(92, 103, 175);
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: x-large;
+  color: black;
+  text-align: center;
+}
+
+.container-table {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+}
+
+.table {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.container-add {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.new-btn {
+  background-color: #4754a0;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgb(3, 54, 8);
+  border-radius: 5px;
+  width: 15%;
+  height: 80%;
+  float: right;
+}
+
+.edit-btn {
+  background-color: #3a5cb8;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: #c43a3a;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.container-form {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+}
+
+.table-form {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.header-form th {
+  background-color: #679767;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.container-save {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background-color: #438643;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgb(3, 54, 8);
+  border-radius: 5px;
+  width: 15%;
+  height: 80%;
+  float: right;
+}
+
+input[readonly]
+{
+    background-color:rgb(203, 209, 202);
+}
+
+input[type=text]{
+    border-radius:5px;
+    padding: 5px;
+    border: 1px solid rgb(48, 5, 148);
+}

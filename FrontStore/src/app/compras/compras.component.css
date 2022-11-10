@@ -1,0 +1,104 @@
+table,
+th,
+td {
+  border: 1px solid rgb(40, 87, 48);
+  border-collapse: collapse;
+  padding: 10px;
+  font-size: 14px;
+}
+
+th {
+  background-color: rgb(105, 115, 177);
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.label-user {
+  font-weight: 500;
+  font-size: medium;
+  color: black;
+  text-align: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: x-large;
+  color: black;
+  text-align: center;
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: medium;
+  color: black;
+  text-align: left;
+}
+
+.container-selector,
+.container-products,
+.container-table {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+}
+
+.table {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.table-form {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.container-save {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.edit-btn {
+  background-color: #59a159;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid rgb(40, 87, 48);
+}
+
+.header-form th {
+  background-color: #5da75d;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.select-client {
+  appearance: none;
+  background-color: rgb(208, 231, 212);
+  border: 1px solid rgb(40, 87, 48);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
